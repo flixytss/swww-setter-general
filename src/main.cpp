@@ -1,12 +1,10 @@
 #include <argumentsea.hpp>
-#include <cstdio>
 #include <cstdlib>
 #include <filesystem>
 #include <format>
 #include <fstream>
 #include <iostream>
 #include <string>
-#include <vector>
 
 namespace fs = std::filesystem;
 
