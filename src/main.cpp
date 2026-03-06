@@ -58,8 +58,8 @@ void catcher(ArgumentsManager* manager) {
     }
     for (const std::filesystem::directory_entry entry : std::filesystem::directory_iterator((std::string){homedir} + "/.local/state/swww-general-extensions")) {
         if (entry.path().string().ends_with(".py")) {
-            if (std::filesystem::exists("/usr/bin/python")) system(std::format("python \"{}\"", entry.path().string()).c_str());
-            else system(std::format("python3 \"{}\"", entry.path().string()).c_str());
+            if (std::filesystem::exists("/usr/bin/python")) system(std::format("python \"{}\" \"{}\"", entry.path().string(), manager->get_argument(manager->get_index())).c_str());
+            else system(std::format("python3 \"{}\" \"{}\"", entry.path().string(), manager->get_argument(manager->get_index())).c_str());
         }
     }
 
