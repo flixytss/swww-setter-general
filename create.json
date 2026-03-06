@@ -1,0 +1,21 @@
+{
+    "project-name": "swww-setter",
+    "files": [
+        ["src", ".cpp"]
+    ],
+    "buildir": "build",
+    "compilers-filter": {
+        ".cc": "clang++"
+    },
+    "run-before": [],
+    "link-args": ["-largumentsea"],
+    "compile-args": {
+        "clang++": "--std=gnu++23"
+    },
+    "includes": {
+        "clang++": "include"
+    },
+    "extra": {
+        "use-ccache": true
+    }
+}
